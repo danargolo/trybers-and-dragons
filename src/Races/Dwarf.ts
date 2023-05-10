@@ -1,11 +1,11 @@
-import Race from "./Race";
+import Race from './Race';
 
 export default class Dwarf extends Race {
   readonly maxLifePoints: number;
-  private static _increase: number = 0;
+  private static _increase = 0;
 
   constructor(name: string, dexterity: number) {
-    super(name, dexterity)
+    super(name, dexterity);
     this.maxLifePoints = 80;
   }
 
@@ -15,7 +15,6 @@ export default class Dwarf extends Race {
 
   static createdRacesInstances(): number {
     Dwarf._increase += 1;
-    return Dwarf._increase
-
+    return Dwarf._increase;
   }
 }
